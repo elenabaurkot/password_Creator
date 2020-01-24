@@ -11,12 +11,26 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-  
 
 // When the button is clicked, prompt user to enter password length
     // might need a function here saying when button is clicked?
     // might need to create a function for that first
 prompt("Choose a password length between 8 and 128 characters");
+
+
+
+
+// DOM
+
+
+
+
+const randomFunc = {
+  lower: randomLow,
+  upper: randomUp,
+  number: randomNum,
+  symbol: randomSym
+};
 
 // RANDOM GENERATORS 
 // generates random lowercase letter
