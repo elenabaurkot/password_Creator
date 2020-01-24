@@ -11,6 +11,10 @@ function writePassword() {
 // function for when the button is clicked to prompt user to enter password length
 function promptMe() {
   var pLength = prompt("Choose a password length between 8 and 128 characters");
+  var lowCase = confirm("Do you want to include lowercase letters in your password?");
+  var upCase = confirm("Do you want to include uppercase letters in your password?");
+  var num = confirm("Do you want to include numbers in your password?");
+  var symb = confirm("Do you want to include special characters in your password?");
 }
 
 
