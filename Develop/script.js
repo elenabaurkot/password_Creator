@@ -8,22 +8,14 @@ function writePassword() {
 
   passwordText.value = password;
 }
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
-// When the button is clicked, prompt user to enter password length
-    // might need a function here saying when button is clicked?
-    // might need to create a function for that first
-prompt("Choose a password length between 8 and 128 characters");
+// function for when the button is clicked to prompt user to enter password length
+function promptMe() {
+  var pLength = prompt("Choose a password length between 8 and 128 characters");
+}
 
 
-
-
-// DOM
-
-
-
+// DOM elements
+const resultEl = document.querySelector("#password");
 
 const randomFunc = {
   lower: randomLow,
