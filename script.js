@@ -20,6 +20,10 @@ generateEl.addEventListener('click', () => {
       alert("Please enter a number between 8 and 128!");
       return;
     }
+    if (isNaN(pLength)) {
+      alert("Please enter a number between 8 and 128!");
+      return;
+    }
   var lowCase = confirm("Do you want to include lowercase letters in your password?");
   var upCase = confirm("Do you want to include uppercase letters in your password?");
   var num = confirm("Do you want to include numbers in your password?");
