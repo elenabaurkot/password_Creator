@@ -44,7 +44,21 @@ function generatePassword(lower, upper, number, symbol,length) {
   if(typesCount === 0) {
     alert("Please try again and select at least one character type for your password.");
   }
+
+  for(let i = 0; i < length; i += typesCount) {
+    typesArr.forEach(type => {
+      const funcName = Object.keys(type)[0];
+      console.log('funcName: ', funcName);
+
+      generatedPassword += randomFunc[funcName]();
+    });
+  }
+
+  const finalPassword = generatedPassword.slice(0, length);
+
+  return finalPassword
 }
+
 
 // RANDOM GENERATORS 
 // generates random lowercase letter
