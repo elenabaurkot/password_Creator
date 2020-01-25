@@ -1,5 +1,3 @@
-
-
 // DOM elements
 var resultEl = document.querySelector("#password");
 var generateEl = document.querySelector("#generate");
