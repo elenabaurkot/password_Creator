@@ -1,17 +1,18 @@
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
-}
+// DOM elements
+var resultEl = document.querySelector("#password");
+var generateEl = document.querySelector("#generate");
 
+const randomFunc = {
+  lower: randomLow,
+  upper: randomUp,
+  number: randomNum,
+  symbol: randomSym
+};
 
 // function for when the button is clicked to prompt user to enter password length
-function promptMe() {
+generateEl.addEventListener('click', () => {
   var pLength = prompt("Choose a password length between 8 and 128 characters");
   var lowCase = confirm("Do you want to include lowercase letters in your password?");
   var upCase = confirm("Do you want to include uppercase letters in your password?");
@@ -23,17 +24,22 @@ function promptMe() {
   var hasUp = (upCase === true); 
   var hasNum = (num === true);
   var hasSymb = (symb) === true; 
+  console.log(hasLower, hasUp, hasNum, hasSymb);
+
+  resultEl.innerText = generatePassword(hasLower, hasUp, hasNum, hasSymb, length);
+});
+
+// Generate password function
+function generatePassword(lower, upper, number, symbol,length) {
+  let generatedPassword = '';
+  
+  const typesCount = lower + upper + number + symbol;
+  console.log('typesCount: ', typesCount);
+
+  const typesArr = [{lower}, {upper}, {number}, {symbol}].filter(item => Object.values(item)[0]);
+
+  console.log('typesArr: ', typesArr);
 }
-
-// DOM elements
-const resultEl = document.querySelector("#password");
-
-const randomFunc = {
-  lower: randomLow,
-  upper: randomUp,
-  number: randomNum,
-  symbol: randomSym
-};
 
 // RANDOM GENERATORS 
 // generates random lowercase letter
