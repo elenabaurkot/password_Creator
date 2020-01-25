@@ -36,9 +36,14 @@ function generatePassword(lower, upper, number, symbol,length) {
   const typesCount = lower + upper + number + symbol;
   console.log('typesCount: ', typesCount);
 
+  // filters out what user doesn't want in the password
   const typesArr = [{lower}, {upper}, {number}, {symbol}].filter(item => Object.values(item)[0]);
-
   console.log('typesArr: ', typesArr);
+
+  // If user doesn't select anything they want in the password
+  if(typesCount === 0) {
+    alert("Please try again and select at least one character type for your password.");
+  }
 }
 
 // RANDOM GENERATORS 
