@@ -14,6 +14,13 @@ const randomFunc = {
 // function for when the button is clicked to prompt user to enter password length
 generateEl.addEventListener('click', () => {
   var pLength = prompt("Choose a password length between 8 and 128 characters");
+    if (pLength < 8 ) {
+      alert("Please enter a number between 8 and 128!"); 
+      return;
+    }
+    if (pLength > 128 ) {
+      alert("Please enter a number between 8 and 128!");
+    }
   var lowCase = confirm("Do you want to include lowercase letters in your password?");
   var upCase = confirm("Do you want to include uppercase letters in your password?");
   var num = confirm("Do you want to include numbers in your password?");
