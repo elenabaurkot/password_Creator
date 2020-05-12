@@ -1,4 +1,4 @@
-#Password Generator
+# Password Generator
 The Password Generator is a site that helps users randomly create a secure password. When users click the "generate password" button they are shown a series of prompts asking them to give a password length between 8-128 characters and whether or not they want to include lowercase letters, uppercase letters, numbers and special characters in their password. After responding to the prompts a password is generated for the user that meets all their requested password type. The website can be accessed at this link: https://elenabaurkot.github.io/password_Creator/
 
 ## Table of Contents
